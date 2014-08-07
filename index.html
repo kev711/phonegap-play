@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>PhoneGap Application</title>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+
+    </head>
+    <body>
+
+        <!--button for capturing a photo-- >
+        <button onclick="takePhoto();">Take A Photo</button> <br>
+        <!--button for accessing the  photo library-- >
+        <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">Get a Photo</button><br>
+         <!--Displaying the image captured to put to data--> 
+        <img style="display:none;width:200px;height:190px;" id="dataImage" src="" />
+        <!--Displaying the image to be accessed from the source file-->
+        <img style="display:none;width:200px;height:190px;" id="uriImage" src="" />
+
+    </body>
+</html>
