@@ -40,7 +40,7 @@ function takePhoto() {
     try{
     navigator.camera.getPicture(onPhotoDataSuccess, onError, {
         quality: 50,
-        destinationType: destinationType.DATA_URL
+        destinationType: Camera.destinationType.DATA_URL
     });
     }catch(excep){
         onError(excep);
@@ -54,7 +54,7 @@ function getPhoto(source) {
         try{
         navigator.camera.getPicture(onPhotoURISuccess, onError, {
         quality: 50,
-        destinationType: destinationType.FILE_URI,
+        destinationType: Camera.destinationType.FILE_URI,
         sourceType: source
     });
     }catch(excep){
