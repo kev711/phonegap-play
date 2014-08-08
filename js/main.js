@@ -43,7 +43,7 @@ function takePhoto() {
         destinationType: Camera.DestinationType.DATA_URL
     });
     }catch(excep){
-        onError(excep);
+        alert('Caught: ' + excep);
     }
 }
 
@@ -58,7 +58,7 @@ function getPhoto(source) {
         sourceType: source
     });
     }catch(excep){
-            onError(excep);
+        alert('Caught: ' + excep);
     }
         
 }
