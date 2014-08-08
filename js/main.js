@@ -37,21 +37,30 @@ function onPhotoURISuccess(imageURI) {
 //Capture picture
 function takePhoto() {
     // Take picture using device camera and retrieve image as base64-encoded string
+    try{
     navigator.camera.getPicture(onPhotoDataSuccess, onError, {
         quality: 50,
         destinationType: destinationType.DATA_URL
     });
+    }catch(excep){
+        onError(excep);
+    }
 }
 
 
 //Get photo from gallery
 function getPhoto(source) {
     // Retrieve image file from gallery
+        try{
         navigator.camera.getPicture(onPhotoURISuccess, onError, {
         quality: 50,
         destinationType: destinationType.FILE_URI,
         sourceType: source
     });
+    }catch(excep){
+            onError(excep);
+    }
+        
 }
 
 
